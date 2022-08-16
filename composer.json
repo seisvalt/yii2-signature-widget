@@ -1,0 +1,21 @@
+{
+    "name": "seisvalt/yii2-signature",
+    "description": "Draw and save signatures in Yii2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","widget","signature","legal"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "seisvalt",
+            "email": "jl.vargass@gmail.com
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "seisvalt\\widgets\\": ""
+        }
+    }
+}
