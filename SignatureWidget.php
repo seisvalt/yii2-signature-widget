@@ -1,6 +1,6 @@
 <?php
 
-namespace inquid\signature;
+namespace seisvalt\signature;
 
 /**
  * This is just an example.
