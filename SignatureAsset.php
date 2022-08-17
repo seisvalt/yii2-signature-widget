@@ -1,6 +1,6 @@
 <?php
 
-namespace seisvalt\widget;
+namespace seisvalt\widgets;
 
 use yii\web\AssetBundle;
 

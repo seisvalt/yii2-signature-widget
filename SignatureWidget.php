@@ -1,6 +1,6 @@
 <?php
 
-namespace seisvalt\signature;
+namespace seisvalt\widgets;
 
 /**
  * This is just an example.
