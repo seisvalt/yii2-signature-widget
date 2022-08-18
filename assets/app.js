@@ -46,7 +46,10 @@ function sendToUrl(dataURL,url) {
     reader.onloadend = function () {
         base64data = reader.result;
         $.post(url, {signature: base64data, token: token}, function (data) {
-            console.log(data)
+
+            if (data.message == true) {
+                window.location.replace(urlCallback);
+            }
         });
     };
 }
@@ -85,16 +88,16 @@ function dataURLToBlob(dataURL) {
 }
 
 if(clearButton!==null)
-clearButton.addEventListener("click", function (event) {
-    signaturePad.clear();
-});
+    clearButton.addEventListener("click", function (event) {
+        signaturePad.clear();
+    });
 
 
 function saveToServer(url) {
     if (signaturePad.isEmpty()) {
         alert("Please provide a signature first.");
     } else {
-        var dataURL = signaturePad.toDataURL();
+        var dataURL = signaturePad.toDataURL("image/jpeg", 0.3);
         sendToUrl(dataURL,url);
     }
 }
