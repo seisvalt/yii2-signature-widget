@@ -47,7 +47,7 @@ function sendToUrl(dataURL,url) {
         base64data = reader.result;
         $.post(url, {signature: base64data, token: token}, function (data) {
 
-            if (data.message == true) {
+            if (JSON.parse(data).message == true) {
                 window.location.replace(urlCallback);
             }
         });

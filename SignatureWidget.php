@@ -1,6 +1,7 @@
 <?php
 
 namespace seisvalt\widgets;
+use Yii;
 
 /**
  * This is just an example.
@@ -33,10 +34,10 @@ class SignatureWidget extends \yii\base\Widget
             $this->height = '200px';
 
         if ($this->save_server == true) {
-            $this->save_buttons .= '<button type="button" class="button save" data-action="save-server" onclick="saveToServer(\'' . $this->url . '\')">Save in Database</button>';
+            $this->save_buttons .= '<button type="button" class="button button-primary" data-action="save-server" onclick="saveToServer(\'' . $this->url . '\')">' . Yii::t('app', 'Save in Database') . ' </button>';
         }
         if ($this->clear == true) {
-            $this->action_buttons .= '<button type="button" class="button clear" data-action="clear">Clear</button>';
+            $this->action_buttons .= '<button type="button" class="button button-danger" data-action="clear">' . Yii::t('app', 'Clear') . '</button>';
         }
 
         $js = "const token = {$this->token}; const urlCallback = {$this->callback};";
