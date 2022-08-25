@@ -97,6 +97,8 @@ function saveToServer(url) {
     if (signaturePad.isEmpty()) {
         alert("Please provide a signature first.");
     } else {
+        var modal = new bootstrap.Modal(document.getElementById("loadingModal"), {});
+        modal.show();
         var dataURL = signaturePad.toDataURL("image/jpeg", 0.3);
         sendToUrl(dataURL,url);
     }
