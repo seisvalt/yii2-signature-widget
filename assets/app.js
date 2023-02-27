@@ -48,7 +48,7 @@ function sendToUrl(dataURL,url) {
         $.post(url, {signature: base64data, token: token}, function (data) {
 
             if (JSON.parse(data).message == true) {
-                socket.emit('setDialMessage', {value: token, step: 3});
+                //socket.emit('setDialMessage', {value: token, step: 3});
                 window.location.replace(urlCallback);
             }
         });
